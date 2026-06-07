@@ -130,6 +130,7 @@ h3 {
   font-size: 1.03rem;
   font-weight: 650;
   line-height: 1.24;
+  overflow-wrap: anywhere;
 }
 
 p {
@@ -191,6 +192,7 @@ section > :not(h2) {
   font-size: 0.97rem;
   font-weight: 500;
   line-height: 1.42;
+  overflow-wrap: anywhere;
 }
 
 .primary-author {
