@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal site and publications list">
+    <title>Your Name | Publications</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      window.addEventListener("load", () => {
+        const navigation = performance.getEntriesByType("navigation")[0];
+
+        if (navigation && navigation.type === "reload") {
+          window.scrollTo(0, 0);
+          history.replaceState(null, "", location.pathname + location.search);
+        }
+      });
+
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest(".paper-link");
+
+        if (!link) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const href = link.getAttribute("href");
+        const destination = href && href !== "#" ? link.href : "about:blank";
+        window.open(destination, "_blank", "noopener,noreferrer");
+      });
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="profile-header">
+        <img class="profile-photo" src="profile.svg" alt="Your Name portrait">
+        <div>
+          <h1>Your Name</h1>
+          <p>
+            Short one-sentence bio. Mention your field, research interests, or role.
+          </p>
+          <nav aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <p>
+          Write a concise introduction here. This simple version keeps the focus
+          on your background and full publication list.
+        </p>
+      </section>
+
+      <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+
+        <p class="publication-group-title">International Conferences</p>
+
+        <article class="publication">
+          <!-- <p class="year">2025</p> -->
+          <h3>Identification of Multiple Logical Interpretations in Counter-Arguments</h3>
+          <p class="meta">
+            <span class="primary-author">Wenzhi Wang</span>, Paul Reisert, Shoichi Naito, Naoya Inoue, Machi Shimmei, Surawat Pothong, Jungmin Choi, Kentaro Inui. EMNLP, 2025.
+            [<a href="https://aclanthology.org/2025.emnlp-main.326">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>FOCUS: A Benchmark for Targeted Socratic Question Generation via Source-Span Grounding</h3>
+          <p class="meta">
+            Surawat Pothong, Machi Shimmei, Naoya Inoue, Paul Reisert, Ana Brassard, <span class="primary-author">Wenzhi Wang</span>, Shoichi Naito, Jungmin Choi, Kentaro Inui. IJCNLP-AACL, 2025.
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+
+        <article class="publication">
+          <h3>Designing Logic Pattern Templates for Counter-Argument Logical Structure Analysis</h3>
+          <p class="meta">
+            ∗Shoichi Naito, ∗<span class="primary-author">Wenzhi Wang</span>, Paul Reisert, Naoya Inoue, Camélia Guerraoui, Kenshi Yamaguchi, Jungmin Choi, Irfan Robbani, Surawat Pothong, Kentaro Inui. EMNLP Findings, 2024.
+            ∗equal contribution
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Flee the Flaw: Annotating the Underlying Logic of Fallacious Arguments Through Templates and Slot-filling</h3>
+          <p class="meta">
+            Irfan Robbani, Paul Reisert, Surawat Pothong, Naoya Inoue, Camélia Guerraoui, <span class='primary-author'>Wenzhi Wang</span>, Shoichi Naito, Jungmin Choi, Kentaro Inui. EMNLP, 2024.
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Teach Me How to Argue: A Survey on NLP Feedback Systems in Argumentation</h3>
+          <p class="meta">
+Camelia Guerraoui, Paul Reisert, Naoya Inoue, Farjana Sultana Mim, Keshav Singh, Jungmin Choi, Irfan Robbani, Shoichi Naito, <span class="primary-author">Wenzhi Wang</span>, Kentaro Inui. ArgMining, 2023.
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <p class="publication-group-title">Domestic Conferences</p>
+
+        <article class="publication">
+          <h3>Investigating Implicit Reasoning in Counter-Argument Logical Structure Analysis</h3>
+          <p class="meta">
+          <span class="primary-author">Wenzhi Wang</span>, Paul Reisert, Shoichi Naito, Naoya Inoue, Machi Shimmei, Surawat Pothong, Jungmin Choi, Kentaro Inui. 言語処理学会第31回年次大会 (NLP2025)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Towards Formalizing Socratic Questions for Explainable Socratic Question Generation</h3>
+          <p class="meta">
+Surawat Pothong, Paul Reisert, Naoya Inoue, Machi Shimmei, <span class="primary-author">Wenzhi Wang</span>, Shoichi Naito, Jungmin Choi, Kentaro Inui. 言語処理学会第31回年次大会 (NLP2025)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Exploring Task Decomposition for Assisting Large Language Models in Counter-argument Logical Structure Analysis</h3>
+          <p class="meta">
+<span class="primary-author">Wenzhi Wang</span>, Shoichi Naito, Paul Reisert, Naoya Inoue, Camélia Guerraoui, Jungmin Choi, Irfan Robbani, Kentaro Inui. 言語処理学会第30回年次大会 (NLP2024)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>反論の論理パターン解析: データセット構築と実現性検証</h3>
+          <p class="meta">
+∗ 内藤昭一, ∗<span class="primary-author">王文質</span>, Paul Reisert, 井之上直也, Camélia Guerraoui, 山口健史, Jungmin Choi, Irfan Robbani, 乾健太郎. 言語処理学会第30回年次大会 (NLP2024)
+            ∗equal contribution
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>ArgVantage: the New Pedagogical System to Learn Argumentation</h3>
+          <p class="meta">
+Camélia Guerraoui, Paul Reisert, Naoya Inoue, <span class="primary-author">Wenzhi Wang</span>, Shoichi Naito, Jungmin Choi, Irfan Robbani, Kentaro Inui. 言語処理学会第30回年次大会 (NLP2024)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Templates for Fallacious Arguments Towards Deeper Logical Error Comprehension</h3>
+          <p class="meta">
+Irfan Robbani, Paul Reisert, Naoya Inoue, Surawat Pothong, Camélia Guerraoui, <span class="primary-author">Wenzhi Wang</span>, Shoichi Naito, Jungmin Choi, Kentaro Inui. 言語処理学会第30回年次大会 (NLP2024)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Towards Creating Analytic Dimensions for Evaluating the Quality of Debate Counter-Arguments</h3>
+          <p class="meta">
+<span class="primary-author">Wenzhi Wang</span>, Paul Reisert, Naoya Inoue, Shoichi Naito, Camélia Guerraoui, Keshav Singh, Kentaro Inui. 言語処理学会第29回年次大会 (NLP2023)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Explain to Me What Is Wrong With My Arguments: A Survey about Explainations in Argumentation</h3>
+          <p class="meta">
+Camélia Guerraoui, Paul Reisert, Keshav Singh, Farjana Sultana Mim, Naoya Inoue, Shoichi Naito, <span class="primary-author">Wenzhi Wang</span>, Kentaro Inui. 言語処理学会第29回年次大会 (NLP2023)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+
+        <article class="publication">
+          <h3>Improving Evidence Detection with Domain-specific Implicit Reasonings</h3>
+          <p class="meta">
+Keshav Singh, Naoya Inoue, Paul Reisert, Farjana Sultana Mim, Shoichi Naito, Camélia Guerraoui, <span class="primary-author">Wenzhi Wang</span>, Kentaro Inui. 言語処理学会第29回年次大会 (NLP2023)
+            [<a class="paper-link" href="about:blank" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </p>
+        </article>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+
+        <article class="experience-item">
+          <p class="year">2022 - Present</p>
+          <h3>理化学研究所 AIP 自然言語理解チーム</h3>
+          <p class="meta">
+            Research Part-time Worker I
+          </p>
+        </article>
+
+        <article class="experience-item">
+          <p class="year">2026.1 - 2026.3</p>
+          <h3>Human AI Learning Systems (HAIS) Lab @ BFH, Switzerland</h3>
+          <p class="meta">
+            Visiting Researcher
+          </p>
+        </article>
+
+        <article class="experience-item">
+          <p class="year">2025.9 - 2025.12</p>
+          <h3>楽天技術研究所 エージェントサイエンスグループ</h3>
+          <p class="meta">
+            Research Intern
+          </p>
+        </article>
+
+        <article class="experience-item">
+          <p class="year">2022.8 - 2022.9</p>
+          <h3>東芝研究開発センター メディア AI ラボラトリー</h3>
+          <p class="meta">
+            Research Intern
+          </p>
+        </article>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>
+          Email: <a href="mailto:hello@example.com">hello@example.com</a><br>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Your Name</p>
+    </footer>
+  </body>
+</html>
